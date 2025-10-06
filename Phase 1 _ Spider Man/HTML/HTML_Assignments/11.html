@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form + Video + Canvas</title>
+</head>
+<body>
+  <h2>1) Form</h2>
+  <form>
+    <!-- Email (required) -->
+    <label for="email">Email (required):</label>
+    <input id="email" name="email" type="email" required placeholder="you@example.com" />
+    <br><br>
+
+    <!-- Date of birth (date picker) -->
+    <label for="dob">Date of birth:</label>
+    <input id="dob" name="dob" type="date" />
+    <br><br>
+
+    <!-- Favorite color (color picker) -->
+    <label for="favColor">Favorite color:</label>
+    <input id="favColor" name="favColor" type="color" value="#1e90ff" />
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+
+  <h2>2) Video with poster + controls</h2>
+  <!-- Use your own poster image / video file paths if available -->
+  <video controls width="480"
+         poster="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/480px-Solid_white.svg.png">
+    <!-- Multiple sources improve browser support -->
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+    Sorry, your browser doesn’t support the video tag.
+  </video>
+
+  <hr>
+ <!-- Learn this first and then implement -->
+  <h2>3) Canvas rectangle</h2>
+  <!-- The canvas is just a drawing area; JavaScript does the drawing -->
+  <canvas id="rectCanvas" width="400" height="200" style="border:1px solid #ccc"></canvas>
+
+  <script>
+    // Grab the canvas and get a 2D drawing context
+    const canvas = document.getElementById('rectCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Draw a filled rectangle (x, y, width, height)
+    function drawRect(color = '#1e90ff') {
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // wipe old drawing
+      ctx.fillStyle = color;                             // fill color
+      ctx.fillRect(50, 40, 300, 120);                    // the rectangle
+      ctx.strokeStyle = 'black';                         // outline
+      ctx.lineWidth = 2;
+      ctx.strokeRect(50, 40, 300, 120);
+    }
+
+    // Initial draw
+    drawRect();
+
+    // Bonus: link the rectangle color to the color picker
+    const colorInput = document.getElementById('favColor');
+    colorInput.addEventListener('input', (e) => drawRect(e.target.value));
+  </script>
+</body>
+</html>

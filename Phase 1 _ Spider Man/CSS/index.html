@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chai aur CSS</title>
+
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* //Content will take overall space with padding and margin inside the same box with content. */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: #1f2937;
+            color: #ffffff;
+
+        }
+
+        nav div ul {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            list-style-type: none;
+            cursor: pointer;
+            
+        }
+
+        nav div button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav div button:hover {
+            background-color: #0c246e;
+            color: #ffffff;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 40px 80px ;
+        }
+        .hero div {
+            width: 50%;
+            margin: 5px;
+
+        }
+
+        .hero div h1 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .hero div p{
+           font-size: 1.2em;
+           color: #b9b9b9;
+           margin-bottom: 1em;
+        }
+        .hero div button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+            width: 45%;
+        }
+
+        .hero div img {
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 10px #ffffff;
+
+            
+        }
+
+        .hero div img:hover{
+            transform: rotate(10deg);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .logo-text {
+            text-align: center;
+            margin: 45px 0;
+        }
+
+        .logo {
+            margin: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 2px solid #393939;
+            padding: 40px 80px;
+
+
+        }
+        .logo div img {
+            width: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+           
+        }
+
+        .three-card {
+            margin: 20px 10%;
+            display: flex;
+            justify-content: center;
+            
+            border: 2px solid #000000;
+            padding: 40px 80px;
+            box-shadow: 0 0 10px #000000;
+            align-items: center;
+        }
+
+         .card {
+            border: 2px solid #000000;
+            width: 33%;
+            border-radius: 27px;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px black;
+          
+        }
+        .card img {
+            width: 200px;
+            object-fit: cover;
+            border-radius: 18px;
+         
+        }
+        h3 {
+          margin: 20px 0;
+
+        }
+
+        .card p {
+            margin: 20px 0;
+        }
+
+        /* media query */
+
+        @media screen and (max-width: 1024px) {
+            .three-card {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .three-card div {
+                width: 80%;
+            }
+
+            
+        }
+
+       
+    </style>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <p>MyLogo</p>
+            </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <button>SignUp</button>
+                <button>Login</button>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div>
+                <h1>Hero Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                    cumque recusandae praesentium fuga, inventore consequatur
+                    blanditiis a quod reprehenderit corporis placeat nihil aut!
+                    Sequi fuga nemo consequuntur?</p>
+                <button>SignUp</button>
+            </div>
+            <div>
+                <img
+                    src="https://images.pexels.com/photos/18264716/pexels-photo-18264716.jpeg"
+                    alt="demo-img">
+            </div>
+        </section>
+
+        <h2 class="logo-text">Our Clients</h2>
+
+        <section class="logo">
+            <div><img
+                    src="https://images.pexels.com/photos/430205/pexels-photo-430205.jpeg"
+                    alt></div>
+            <div><img
+                    src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg"
+                    alt></div>
+            <div><img
+                    src="https://images.pexels.com/photos/430205/pexels-photo-430205.jpeg"
+                    alt></div>
+            <div><img
+                    src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg"
+                    alt></div>
+            <div><img
+                    src="https://images.pexels.com/photos/430205/pexels-photo-430205.jpeg"
+                    alt></div>
+        </section>
+
+        <section class="three-card">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt>
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    cupiditate adipisci, ipsa dolorum dolorem assumenda ipsam,
+                    asperiores maiores id nam minus cum minima optio numquam
+                    placeat delectus?</p>
+            </div>
+
+             <div class="card">
+                <img src="https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg" alt>
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    cupiditate adipisci, ipsa dolorum dolorem assumenda ipsam,
+                    asperiores maiores id nam minus cum minima optio numquam
+                    placeat delectus?</p>
+            </div>
+
+             <div class="card">
+                <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt>
+                <h3>Card Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    cupiditate adipisci, ipsa dolorum dolorem assumenda ipsam,
+                    asperiores maiores id nam minus cum minima optio numquam
+                    placeat delectus?</p>
+            </div>
+        </section>
+    </body>
+</html>

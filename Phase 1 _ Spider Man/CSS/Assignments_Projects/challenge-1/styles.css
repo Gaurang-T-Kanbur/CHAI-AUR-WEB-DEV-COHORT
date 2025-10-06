@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: #0a0a0a;
+}
+
+.hero {
+}
+
+.announcement {
+}
+
+.announcement-link {
+  /*  */
+}
+
+.announcement-link:hover {
+}
+
+.announcement-text {
+}
+
+.announcement-button {
+}
+
+.hero-content {
+}
+
+.hero-title {
+}
+
+.hero-description {
+}
+
+.cta-button {
+}
+
+.cta-button:hover {
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .announcement-link {
+    font-size: 0.75rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
+
+body {
+				margin: 0;
+				height: 100vh;
+				background: linear-gradient(to bottom, #0f0a1f, #0d0515, #000000);
+            	/* optional: smooth transition if scrolling */
+            	background-attachment: fixed;
+			}
+		  
+			.hero {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+			padding: 20px;
+			
+			
+            
+			}
+
+		
+		.announcement {
+			text-align: center;
+			/* background: linear-gradient(to bottom, #130f2e, #000000); */
+			background: #1c172b;          /* dark background for the section */
+  			border: 1px solid #2a223b;    /* thin border line */
+  			border-radius: 40px;
+			margin: 10% auto;
+			width: 30%;
+			height: 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			/* padding: 0 10px; */ 
+		}
+
+		.announcement-link {
+			text-decoration: none;
+			color: #ffffff;
+			font-size: 1.25em;
+			width: 100%;	
+		}
+
+		.announcement-button {
+			padding: 9px;
+			background-color: #554d64 ;
+			border-radius: 45%;
+			
+		}
+		
+
+		.announcement-button svg {
+			margin: auto 5px;
+			width: 18px;                  
+  			height: 18px;
+  			stroke: #ffffff;
+			font-size: large;
+		}
+
+		.announcement {
+  text-align: center;
+  background: #1c172b;          /* dark background */
+  border: 1px solid #2a223b;    /* subtle border */
+  border-radius: 40px;          /* pill shape */
+  margin: 50px;
+  width: 25.5%;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 0.9em;
+}
+
+.announcement-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25em;
+  display: flex;                     /* flex container for text + arrow */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.announcement-text {
+  flex: 1;                           /* takes remaining space */
+  font-size: 1em;
+  
+}
+
+.announcement-button {
+  display: flex;                      /* centers svg */
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  border-radius: 36px;                 /* makes it a circle */
+  background: #312846;
+  margin-left: 3.5px;
+ 
+}
+
+.announcement-button svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffffff;                    /* white arrow */
+}
+
+.announcement{
+	margin-bottom: 27px;
+}
+
+.hero-content{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero-title {
+	font-size: 4.5em;
+	text-align: center;
+	margin: 0 18%;
+	font-style: normal;
+	width:fit-content;
+	max-width: 900px;  
+    line-height: 1.2;   
+    margin: 0 auto;  
+	font-weight:500;
+	color: #fffffff2;
+}
+
+.hero-description {
+	font-size: 1.2em;
+	text-align: center;
+	font-style: normal;
+	width:fit-content;
+	max-width: 600px;  
+    line-height: 1.2;   
+    margin: 0 auto;  
+	margin-top: 27px;
+	font-weight:400;
+	color: #ffffffb9;
+}
+
+.cta-button {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 27px;
+	text-decoration: none;
+	color:#ffffff;
+	padding: 10px;
+	background: linear-gradient(90deg, #4f7eff, #6a5bff, #8b3dff);
+	border-radius: 40px;
+	width: 150px;
+
+
+
+}
+
+.announcement:hover {
+	 background: #332c46;          /* dark background */
+  border: 1px solid #2a223b;
+
+}
+
+.announcement:hover .announcement-button {
+	 background: #5d5182;          /* dark background */
+  
+
+}
+
+/* 🔥 Hover effect */
+.cta-button:hover {
+  transform: translateY(-2px); /* move up slightly */
+  box-shadow: 0 0 20px rgba(35, 61, 133, 0.7),
+              0 0 35px rgba(60, 18, 123, 0.6);
+  border: 0.5px solid #1d3371b3;
+}
